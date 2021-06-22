@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Validação</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+
+    function Enviar(){
+        var nome = formulario.nome.value;
+        var sobrenome = formulario.sobrenome.value;
+        var email = formulario.email.value;
+        var senha = formulario.senha.value;
+        
+        if(nome == "") {
+            alert ('Preencha o campo nome.');
+            formulario.nome.focus();
+            return false;
+        }
+        
+        if(sobrenome == ""){
+            alert ('Preencha o campo sobrenome.');
+            formulario.sobrenome.focus();
+            return false;
+        }
+
+        if(email == ""){
+            alert ('Preencha o campo email.');
+            formulario.email.focus();
+            return false;
+        }
+
+        if(senha == ""){
+            alert ('Preencha o campo senha.');
+            formulario.senha.focus();
+            return false;
+        }
+    }
+        
+ </script>
+</head>
+<body>
+    <form class="form" name="formulario" method="POST">
+    <label>Nome:</label><br>
+    <input class="inside" type="text" name="nome"><br><br>
+    <label>Sobrenome:</label><br>
+    <input class="inside" type="text" name="sobrenome"><br><br>
+    <label>Email:</label><br>
+    <input class="inside" type="email" name="email" required><br><br>
+    <label>Senha:</label><br>
+    <input class="inside" type="password" name="senha"><br><br>
+
+    <input class="botao" type="submit" value="Enviar" onclick="return Enviar()"> 
+    </form>
+    
+    
+</body>
+</html>
